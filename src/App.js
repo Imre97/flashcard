@@ -56,7 +56,7 @@ function App() {
       <form className='header' onSubmit={handelSubmit}>
         <div className="form-group">
           <label htmlFor="category">Category</label>
-          <select id="category" ref={categoryEl}>
+          <select id="category" ref={categoryEl} onChange={() => setFlashcards([])}>
             {categories.map(category => {
               return <option value={category.id} key={category.id}>{category.name}</option>
             })}
